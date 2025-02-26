@@ -13,3 +13,11 @@ fun countDownList(num:Int):List<Int>{
     }
     return nums
 }
+
+fun countDownForLoop(num:Int):List<Int>{
+    val list = mutableListOf<Int>()
+    for(i in num downTo 1){
+        list.add(i)
+    }
+    return list
+}

@@ -11,22 +11,22 @@ package com.verycool.kotlinchallenges.beginner
 
 fun main(){
     val str = "FOO_BAR_Ham"
-    println(snakeToCamel(str))
+    println(snakeCamel(str))
 }
 
-fun snakeToCamel(str:String):String{
-    val words = str.split("_")
+fun snakeCamel(input:String):String{
+    val words = input.split("_")
+    var result = ""
     var first = true
-    var newStr =""
-    for(word in words){
+    words.forEach{
         if(first){
-            newStr = word.toLowerCase()
-            first = false
+            result += it.toLowerCase()
+            first=false
         }else{
-            newStr = "$newStr${word[0].toUpperCase().toString() + word.substring(1).toLowerCase()}"
+            result += it.first().toUpperCase() + it.substring(1).toLowerCase()
         }
     }
-
-    return newStr
+    return result
 }
+
 

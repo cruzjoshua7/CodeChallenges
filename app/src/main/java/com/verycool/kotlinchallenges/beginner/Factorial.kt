@@ -6,8 +6,9 @@ package com.verycool.kotlinchallenges.beginner
 // multiplying all numbers from 1 to n eg. factorial of 3 (3!) is equal to 6 (3 * 2 * 1)
 
 fun main(){
-    println(factorial(1))
+    println(factorial(5))
 }
+
 
 fun factorial(num:Int):Int{
     if(num==1){

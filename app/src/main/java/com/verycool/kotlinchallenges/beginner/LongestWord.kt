@@ -6,16 +6,17 @@ package com.verycool.kotlinchallenges.beginner
 // Ignore punctuation. Input string can't be empty or blank sering.
 
 fun main(){
-    println(longestWord("the long word longer"))
+    println(longWord("the longie word longer"))
 }
 
-fun longestWord(str:String):String{
-    var words = str.split(" ")
-    var longWord = words[0]
-    for(word in words){
-        if(longWord.length < word.length){
-            longWord = word
+
+fun longWord(input:String):String{
+    val words = input.split(" ")
+    var longest =""
+    words.forEach{
+        if(longest.length < it.length){
+            longest = it
         }
     }
-    return longWord
+    return longest
 }

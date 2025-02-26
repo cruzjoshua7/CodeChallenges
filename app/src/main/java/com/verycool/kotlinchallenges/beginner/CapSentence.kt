@@ -7,11 +7,14 @@ fun main(){
     println(capEveryFirstChar(str))
 }
 
-fun capEveryFirstChar(str:String):String{
+fun capEveryFirstChar(input:String):String{
     val words = mutableListOf<String>()
 
-    str.split(" ").forEach{
-        words.add(it[0].uppercaseChar() + it.substring(1))
+    input.split(" ").forEach{
+        //words.add(it[0].uppercaseChar() + it.substring(1))
+        words.add(it.first().toUpperCase() + it.substring(1))
     }
     return words.joinToString(" ")
 }
+
+
